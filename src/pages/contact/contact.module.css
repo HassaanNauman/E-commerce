@@ -1,0 +1,243 @@
+.hero {
+  margin: 2rem auto;
+  background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
+  color: #FFFFFF;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 700px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(17, 17, 17, 0.3);
+  border: 2px solid #FFD700;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(255, 215, 0, 0.1) 50%, transparent 70%);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #FFD700;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  position: relative;
+  z-index: 1;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  position: relative;
+  z-index: 1;
+}
+
+.contactContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.contactInfo h2,
+.contactForm h2 {
+  font-size: 2rem;
+  color: #111111;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.contactInfo h2::after,
+.contactForm h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #FFD700, #FFA500);
+  border-radius: 2px;
+}
+
+.contactInfo p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.contactMethods {
+  margin-bottom: 2rem;
+}
+
+.contactMethod {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(17, 17, 17, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.contactMethod:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 35px rgba(17, 17, 17, 0.15);
+  border-color: rgba(255, 215, 0, 0.4);
+}
+
+.contactIcon {
+  font-size: 1.8rem;
+  margin-top: 0.25rem;
+  color: #FFD700;
+}
+
+.contactMethod h3 {
+  color: #111111;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.contactMethod p {
+  color: #666;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.socialLinks h3 {
+  color: #111111;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  position: relative;
+}
+
+.socialLinks h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #FFD700, #FFA500);
+  border-radius: 1px;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.socialIcon {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color: #111111;
+  text-decoration: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+.socialIcon:hover {
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+}
+
+.contactForm {
+  background: #FFFFFF;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(17, 17, 17, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.formGroup {
+  margin-bottom: 2rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.8rem;
+  color: #111111;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.formInput,
+.formTextarea {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  background: #FFFFFF;
+}
+
+.formInput:focus,
+.formTextarea:focus {
+  border-color: #FFD700;
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contactForm .btn {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+  }
+  
+  .contactContainer {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .contactInfo h2,
+  .contactForm h2 {
+    font-size: 1.8rem;
+  }
+  
+  .contactForm {
+    padding: 2rem;
+  }
+}
